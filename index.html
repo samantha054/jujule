@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Calcul taux</title>
+</head>
+<body>
+    <h1 class="titre">Programme pour jujule lol</h1>
+    <h1>Calcul HT vers TTC</h1>
+
+    <input type="number" id="ht" name="ht" value="" placeholder="Votre chiffre HT" autocomplete="off">
+
+    <input type="number" id="taux" name="taux" value="" placeholder="Votre taux TVA" autocomplete="off">
+
+    <input type="button" value="Calcul" onclick="calculTtc()">
+
+    <p class="htTtc"></p>
+
+<!-- TTC vers HT -->
+
+
+    <h1>Calcul TTC vers HT</h1>
+
+    <input type="number" id="ttc" name="ttc" value="" placeholder="Votre chiffre TTC" autocomplete="off">
+
+    <input type="number" id="taux1" name="taux1" value="" placeholder="Votre taux TVA" autocomplete="off">
+
+    <input type="button" value="Calcul" onclick="calculHt()">
+
+    <p class="ttcHt"></p>
+
+    <!-- Taux -->
+    <h1>Calcul du taux</h1>
+
+    <input type="number" id="ttc1" name="ttc1" value="" placeholder="Votre chiffre TTC" autocomplete="off">
+
+    <input type="number" id="ht1" name="ht1" value="" placeholder="Votre chiffre HT" autocomplete="off">
+
+    <input type="button" value="Calcul" onclick="calculTaux()">
+
+    <p class="taux"></p>
+
+    <!-- Remises -->
+
+    <h1>Prix réduit</h1>
+
+    <input type="number" id="remise" name="remise" value="" placeholder="Votre prix" autocomplete="off">
+
+    <input type="number" id="tauxremise" name="tauxremise" value="" placeholder="Votre % de remises" autocomplete="off">
+
+    <input type="button" value="Calcul" onclick="calculRemise()">
+
+    <p class="remise"></p>
+
+    <!-- taux remises? -->
+
+    <h1>Taux remises?</h1>
+
+    <input type="number" id="avantreduc" name="avantreduc" value="" placeholder="Votre prix avant réduction" autocomplete="off">
+
+    <input type="number" id="apresreduc" name="apresreduc" value="" placeholder="Votre prix APRES réduction" autocomplete="off">
+
+    <input type="button" value="Calcul" onclick="calculTauxRemise()">
+
+    <p class="tauxremise"></p>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

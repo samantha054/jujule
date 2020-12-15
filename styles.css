@@ -1,0 +1,13 @@
+.titre{
+    text-align: center;
+    color: deepskyblue;
+    font-family: 'Russo One', sans-serif;
+    text-shadow: 2px 2px 50px fuchsia;
+    font-size: 45px;
+}
+
+body{
+    background: rgb(255,255,255);
+background: linear-gradient(126deg, rgba(255,255,255,1) 0%, rgba(168,94,94,1) 19%, rgba(149,163,85,1) 29%, rgba(113,121,9,1) 43%, rgba(60,129,10,1) 51%, rgba(11,113,60,1) 58%, rgba(51,93,90,1) 67%, rgba(83,77,83,1) 83%, rgba(226,19,86,1) 100%);
+
+}
