@@ -38,8 +38,8 @@ function calculTauxRemise() {
     document.querySelector('.tauxremise').innerHTML=pendant+"%";
 }
 function PMSS() {
-    let PMSS= +document.querySelector('#PMSS').value;
+    let PMSSt= +document.querySelector('#PMSS').value;
 
-    let PMSSt = PMSS*34.28;
-    document.querySelector('.PMSS').innerHTML=PMSSt+"€";
+    let PMSSt2 = PMSSt*34.28;
+    document.querySelector('.PMSS').innerHTML=PMSSt2+"€";
 }
