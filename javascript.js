@@ -37,3 +37,9 @@ function calculTauxRemise() {
     let pendant = (1-(apres/avant))*100;
     document.querySelector('.tauxremise').innerHTML=pendant+"%";
 }
+function PMSS() {
+    let PMSS= +document.querySelector('#PMSS').value;
+
+    let PMSSt = PMSS*34.28;
+    document.querySelector('.PMSS').innerHTML=PMSSt+"€";
+}
