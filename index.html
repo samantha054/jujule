@@ -10,15 +10,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Calcul taux</title>
     <style>
-        .card{
-            max-width: 300px;
-        }
+       
     </style>
 </head>
 <body>
+    <div class="container">
     <h1 class="titre">Programme pour jujule lol</h1>
-
-    <div class="card">
+<div class="row my-5 d-flex justify-content-between">
+    <div class="card col-md-3">
         <div class="card-header fw-semibold">
             Calcul HT vers TTC
         </div>
@@ -33,65 +32,99 @@
         <input class="btn btn-primary w-100 py-2 mb-2" type="button" value="Calculer" onclick="calculTtc()">
         <h3 class="htTtc text-center my-2"></h3>
     </div>
+    <!-- TTC vers HT -->
 
-
-<!-- TTC vers HT -->
-
-
-    <h1>Calcul TTC vers HT</h1>
-
-    <input type="number" id="ttc" name="ttc" value="" placeholder="Votre chiffre TTC" autocomplete="off">
-
-    <input type="number" id="taux1" name="taux1" value="" placeholder="Votre taux TVA" autocomplete="off">
-
-    <input type="button" value="Calcul" onclick="calculHt()">
-
-    <p class="ttcHt"></p>
+    <div class="card col-md-3">
+        <div class="card-header fw-semibold">
+            Calcul TTC vers HT
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="ttc" placeholder="Chiffre TTC" name="ttc">
+            <label for="ttc">Chiffre TTC</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="taux1" placeholder="Taux TVA" name="taux1">
+            <label for="taux1">Taux TVA</label>
+        </div>
+        <input class="btn btn-success w-100 py-2 mb-2" type="button" value="Calculer" onclick="calculHt()">
+        <h3 class="ttcHt text-center my-2"></h3>
+    </div>
+    
 
     <!-- Taux -->
-    <h1>Calcul du taux</h1>
 
-    <input type="number" id="ttc1" name="ttc1" value="" placeholder="Votre chiffre TTC" autocomplete="off">
+    <div class="card col-md-3">
+        <div class="card-header fw-semibold">
+            Calcul taux
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="ttc1" placeholder="Chiffre TTC" name="ttc1">
+            <label for="ttc1">Chiffre TTC</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="ht1" placeholder="Chiffre HT" name="ht1">
+            <label for="ht1">Chiffre HT</label>
+        </div>
+        <input class="btn btn-warning w-100 py-2 mb-2" type="button" value="Calculer" onclick="calculTaux()">
+        <h3 class="taux text-center my-2"></h3>
+    </div>
 
-    <input type="number" id="ht1" name="ht1" value="" placeholder="Votre chiffre HT" autocomplete="off">
-
-    <input type="button" value="Calcul" onclick="calculTaux()">
-
-    <p class="taux"></p>
-
+</div>
+    
+<div class="row my-5 d-flex justify-content-between">
     <!-- Remises -->
 
-    <h1>Prix réduit</h1>
-
-    <input type="number" id="remise" name="remise" value="" placeholder="Votre prix" autocomplete="off">
-
-    <input type="number" id="tauxremise" name="tauxremise" value="" placeholder="Votre % de remises" autocomplete="off">
-
-    <input type="button" value="Calcul" onclick="calculRemise()">
-
-    <p class="remise"></p>
+    <div class="card col-md-3">
+        <div class="card-header fw-semibold">
+            Réduction montant
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="remise" placeholder="Montant" name="remise">
+            <label for="remise">Montant</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="tauxremise" placeholder="Taux de remise" name="tauxremise">
+            <label for="tauxremise">Taux de remise</label>
+        </div>
+        <input class="btn btn-info w-100 py-2 mb-2" type="button" value="Calculer" onclick="calculRemise()">
+        <h3 class="remise text-center my-2"></h3>
+    </div>
 
     <!-- taux remises? -->
-
-    <h1>Taux remises?</h1>
-
-    <input type="number" id="avantreduc" name="avantreduc" value="" placeholder="Votre prix avant réduction" autocomplete="off">
-
-    <input type="number" id="apresreduc" name="apresreduc" value="" placeholder="Votre prix APRES réduction" autocomplete="off">
-
-    <input type="button" value="Calcul" onclick="calculTauxRemise()">
-
-    <p class="tauxremise"></p>
+     <div class="card col-md-3">
+        <div class="card-header fw-semibold">
+            Pourcentage de la remise
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="avantreduc" placeholder="Avant réduction" name="avantreduc">
+            <label for="avantreduc">Avant réduction</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="apresreduc" placeholder="Après réduction" name="apresreduc">
+            <label for="apresreduc">Après réduction</label>
+        </div>
+        <input class="btn btn-dark w-100 py-2 mb-2" type="button" value="Calculer" onclick="calculTauxRemise()">
+        <h3 class="tauxremise text-center my-2"></h3>
+    </div>
     
         <!-- taux remises? -->
+        <div class="card col-md-3">
+            <div class="card-header fw-semibold">
+                % de remboursement PMSS
+            </div>
+            <div class="form-floating">
+                <input type="number" class="form-control" id="PMSS" placeholder="% de remboursement PMSS" name="PMSS">
+                <label for="PMSS">% de remboursement PMSS</label>
+            </div>
+            <input class="btn btn-danger w-100 py-2 mb-2" type="button" value="Calculer" onclick="PMSS()">
+            <h3 class="PMSS text-center my-2"></h3>
+        </div>
+    </div>
+</div>
 
-    <h1>% de remboursement PMSS</h1>
 
-    <input type="number" id="PMSS" name="PMSS" value="" placeholder="% de remboursement PMSS" autocomplete="off">
 
-    <input type="button" value="PMSS" onclick="PMSS()">
 
-    <p class="PMSS"></p>
 
     <script src="javascript.js"></script>
 </body>
